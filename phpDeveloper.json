@@ -1,0 +1,61 @@
+ {
+    "name": "e-conomix/passionate-php-developer",
+    "description": "Jobdescription for a passionate PHP developer",
+    "type": "employee",
+    "version": "1.0.0",
+    "keywords": ["Wherever you are", "Learning from the best", "Great team", "3x Magento Master among us"],
+    "homepage": "www.e-conomix.at",
+    "authors": [{
+    	"name": "send your application"
+    	"email": "jobs@e-conomix.at"
+    }],
+    "license": [
+        "Wir bieten je nach kollektivvertraglicher Einstufung ein monatliches Grundgehalt 
+        von mindestens € 2.750.- brutto mit der Bereitschaft zur Überzahlung abhängig von 
+        Qualifikation, Erfahrung und dem Engagement im Team."
+    ],
+    "require": {
+        "php/knowledge": "5.6 | ^7",
+        "programming-paradigm/OOP": "^1.0"
+    },
+    "require-dev": {
+        "interests/programming": "~6.2.0",
+        "interests/have-a-nice-team-around": "2.0.4"
+    },
+    "repositories": {
+        "wels": {
+            "type": "location",
+            "url": "Zeileisstraße 6, 4600 Wels"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Economix\\GreatTeam\\": "src/team",
+        },
+        "psr-0": {
+            "BonutSystem": [
+            	"src/bonuts/FreeDrinks/",
+            	"src/bonuts/FreeFood/",
+            	"src/bonuts/Parking/",
+            	"src/bonuts/AndMuchMore/"
+            ]
+        },
+        "files": [
+            "src/economix/HomeOffice.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "Customers": [
+            	"customers/Resch&Frisch/",
+            	"customers/Biohort/",
+            	"customers/Runtastic/",
+            	"customers/Fronius/",
+            	"customers/AndManyMore/"
+            ]
+        },
+    },
+    "scripts": {
+    	"after-work-beer": "if (date('H')>=16) echo 'You like beer? So do we - cheers';"
+    }
+}
