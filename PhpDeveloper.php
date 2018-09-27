@@ -60,9 +60,9 @@ class PhpDeveloper extends JobDescription
         $mail = new PHPMailer(true);
         
         try {
-            $mail->setFrom('jobs@e-conomix.at', 'Job Application Contact');
+            $mail->setFrom(self::OUR_CONTACT, 'Job Application Contact');
             $mail->addReplyTo('your-address@example.com', 'Your Name');
-            $mail->addAddress('jobs@e-conomix.at', 'Job Application Contact');
+            $mail->addAddress(self::OUR_CONTACT, 'Job Application Contact');
             $mail->Subject = 'Job application';
             $mail->AltBody = 'Your job application mail body goes here';
             $mail->addAttachment('path/to/your/jobapplication/as/file.pdf');
