@@ -65,7 +65,7 @@ class PhpDeveloper extends JobDescription
             $mail->addAddress('jobs@e-conomix.at', 'Job Application Contact');
             $mail->Subject = 'Job application';
             $mail->AltBody = 'Your job application mail body goes here';
-            $mail->addAttachment('your/application/as/file.pdf');
+            $mail->addAttachment('path/to/your/jobapplication/as/file.pdf');
             $mail->send();
         } catch (PHPMailerException $e) {
             echo 'Application could not be sent.';
