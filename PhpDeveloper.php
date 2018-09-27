@@ -28,17 +28,23 @@ class PhpDeveloper extends JobDescription
     /** @var array */
     private $programmingSkills;
     
+    public function __construct()
+    {
+        $this->isHomeOfficePossible = true;
+        $this->bonutSystem = ['Free Drinks', 'Free Food', 'Parking', 'and much more'];
+        $this->customers = ['Resch & Frisch', 'Runtastic', 'Fronius', 'electronic4you', 'and many more'];
+        $this->furtherBenefits = ['Learning from the best', 'Great team', '3x Magento Master among us'];
+    }
+    
     /**
      * Our benefits we can offer you
      **/
     public function ourBenefitsForYou()
     {
-        $this->isHomeOfficePossible = true;
-        $this->bonutSystem = ['Free Drinks', 'Free Food', 'Parking', 'and much more'];
-        $this->customers = ['Resch & Frisch', 'Biohort', 'Runtastic', 'Fronius', 'and many more'];
-        $this->furtherBenefits = ['Learning from the best', 'Great team', '3x Magento Master among us'];
-    
-        if (date('H') >= 16) {
+        $dateTimeZone = new \DateTimeZone('Europe/Vienna');
+        $dateTime = new \DateTime('now', $dateTimeZone);
+        
+        if ($dateTime->format('H') >= 16) {
             $this->afterWorkBeer();
         }
     }
