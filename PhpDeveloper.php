@@ -85,7 +85,7 @@ class PhpDeveloper extends JobDescription
      **/
     private function afterWorkBeer()
     {
-        echo 'You like beer? So do we - cheers 🍻';
+        echo 'A beer? Here we cheer 🍻';
     }
 }
 
